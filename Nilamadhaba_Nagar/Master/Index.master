@@ -1,0 +1,270 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Index.master.cs" Inherits="Master_Index" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+	<title>Nilamadhaba Nagar</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/css/dataTables.bootstrap4.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link href="../css2/StyleSheet.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+    <body class="fixed-nav sticky-footer bg-white" id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-theme fixed-top" id="mainNav">
+        <a class="navbar-brand" href="../Dashboard.aspx">
+            <img src="../Image/Real.jpg" style="height:60px; width:60px; border-radius:30px;" />   </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                    <a class="nav-link" href="../Dashboard.aspx">
+                        <i class="fa fa-fw fa-dashboard"></i>
+                        <span class="nav-link-text">Dashboard</span>
+                    </a>
+                </li>
+                
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Admin">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseadministrative" data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-user"></i>
+                        <span class="nav-link-text">Admin</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseadministrative">
+                        <li>
+                            <a href="../Admin/Customer_Detailss.aspx"> Custemer Details</a>
+                            <a href="../Admin/Land_Owner_Details.aspx">Land Owner Details</a>
+                             <a href="../Admin/Plot_Details.aspx">Plot Details</a>
+                           <a href="../Admin/Property_Master.aspx">Property Master</a>
+                   
+                        </li>
+                     
+                    </ul>
+                </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponentss" data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-upload"></i>
+                        <span class="nav-link-text">Master Entry</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseComponentss">
+                        <li>
+                            <a href="../Master_Pages/Plot_No_Master.aspx">Plot No</a>
+                        </li>
+                        <li>
+                            <a href="../Master_Pages/Plot_Location_Master.aspx">plot Location</a>
+                        </li>
+                         <li>
+                            <a href="../Master_Pages/Project_Master.aspx">Project</a>
+                        </li>
+                       <%-- <li>
+                            <a href="../UploadDocs/RegAction_Upload_new.aspx">Reg_Action</a>
+                        </li>
+                         <li>
+                            <a href="../UploadDocs/MonitoringProgram_Upload.aspx">Monitoring Program</a>
+                        </li>
+                        <li>
+                            <a href="../UploadDocs/BMW_Upload.aspx">BMW </a>
+                        </li>--%>
+
+                        <%-- <li>
+                            <a href="#">Sample</a>
+                        </li>
+                         <li>
+                            <a href="#">Meetings</a>
+                        </li>
+                        <li>
+                            <a href="#">Reg_Action</a>
+                        </li>
+                         <li>
+                            <a href="#">Monitoring Program</a>
+                        </li>
+                        <li>
+                            <a href="#">BMW </a>
+                        </li>--%>
+
+
+                    </ul>
+                </li>
+
+                  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponentss1" data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-upload"></i>
+                        <span class="nav-link-text">Upload Documents1</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseComponentss1">
+                      
+                        <li>
+                            <a href="../UploadDocs1/BMW_Upload.aspx">BMW </a>
+                        </li>
+
+                        <%-- <li>
+                            <a href="#">Sample</a>
+                        </li>
+                         <li>
+                            <a href="#">Meetings</a>
+                        </li>
+                        <li>
+                            <a href="#">Reg_Action</a>
+                        </li>
+                         <li>
+                            <a href="#">Monitoring Program</a>
+                        </li>
+                        <li>
+                            <a href="#">BMW </a>
+                        </li>--%>
+
+
+                    </ul>
+                </li>
+
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-file"></i>
+                        <span class="nav-link-text">Reports</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                         <li>
+                            <a href="../Admin/Inspection_Report.aspx">Inspection Report</a>
+                        </li>
+                        <li>
+                            <a href="../Admin/Sample_Report.aspx">Sample Report</a>
+                        </li>
+                         <li>
+                            <a href="../Admin/ListOfMeeting_Report.aspx">Meetings Report</a>
+                        </li>
+                        <li>
+                            <a href="../Admin/RegAction_Report.aspx">Reg_Action Report</a>
+                        </li>
+                         <li>
+                            <a href="../Admin/MonitoringProgram_Report.aspx">Monitoring Program Report</a>
+                        </li>
+                        <li>
+                            <a href="../Admin/BMW_Report.aspx">BMW Report </a>
+                        </li>
+
+
+                        <%--  <li>
+                            <a href="#">Sample Report</a>
+                        </li>
+                         <li>
+                            <a href="#">Meetings Report</a>
+                        </li>
+                        <li>
+                            <a href="#">Reg_Action Report</a>
+                        </li>
+                         <li>
+                            <a href="#">Monitoring Program Report</a>
+                        </li>
+                        <li>
+                            <a href="#">BMW Report </a>
+                        </li>--%>
+
+
+
+                    </ul>
+                </li>
+               
+            </ul>
+            <ul class="navbar-nav sidenav-toggler">
+                <li class="nav-item">
+                    <a class="nav-link text-center" id="sidenavToggler">
+                        <i class="fa fa-fw fa-angle-left"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <div class="nav-link main-log">
+                        <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="../image/prof-img.png" class="prof-img">
+                        </a>
+                        <div class="prof-box">
+
+                        </div>
+                        <ul>
+                            <li><a class="prof-name"><asp:Label ID="lblName" runat="server"></asp:Label> </a></li>
+                            <li><a class="log-dd" data-toggle="modal" data-target="#exampleModal">Logout</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content-wrapper">
+        <div class="container-fluid">
+          
+
+            <form id="form1" runat="server">
+    <div>
+        <div class="inr-cont">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            
+        </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+
+
+
+
+
+            <footer class="sticky-footer">
+                <div class="container">
+                    <div class="text-center">
+                        <small>Copyright © Pollution Control Board 2021</small>
+                    </div>
+                </div>
+            </footer>
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+            <!-- Logout Modal-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                            <a class="btn btn-primary" href="../Default.aspx">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/dataTables.bootstrap4.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+</body>
+
+
+
+
+
+
+    
+
+</html>
